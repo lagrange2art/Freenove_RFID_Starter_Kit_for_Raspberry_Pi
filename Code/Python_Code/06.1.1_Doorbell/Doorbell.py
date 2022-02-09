@@ -19,10 +19,10 @@ def loop():
     while True:
         if GPIO.input(buttonPin)==GPIO.LOW: # if button is pressed
             GPIO.output(buzzerPin,GPIO.HIGH) # turn on buzzer
-            print ('buzzer turned on >>>')
+            print ('buzzer turned on >>> \r', end='')
         else : # if button is relessed
             GPIO.output(buzzerPin,GPIO.LOW) # turn off buzzer
-            print ('buzzer turned off <<<')
+            print ('buzzer turned off <<< \r', end='')
 
 def destroy():
     GPIO.cleanup()                     # Release all GPIO
